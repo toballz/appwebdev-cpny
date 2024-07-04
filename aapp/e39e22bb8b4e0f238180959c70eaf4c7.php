@@ -8,7 +8,7 @@ class site{
     public static function url($vrvi){
         if ($vrvi=="domain"){
             return self::isSecure()."//".$_SERVER['SERVER_NAME'];
-        }else if ($vrvi=="servername"){
+        }else if ($vrvi=="server"){
             return $_SERVER['SERVER_NAME'];
         }else if($vrvi=="uri"){
             return $_SERVER['REQUEST_URI'];

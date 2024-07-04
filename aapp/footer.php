@@ -18,7 +18,7 @@
 .jej3j-io>ul>li>a{padding:4px;margin-bottom:4px;color:#fff;}
 
 
-.jlojlo{padding: 12px;}
+.jlojlo{ background : #12153e;color:#fff}
 
 </style>
 
@@ -43,13 +43,14 @@
                 <h3>Support</h3>
                 <ul>
                     <li><a href="">Privacy Policy</a></li>
-                    <li><a href="">Terms & Conditions</a></li> 
+                    <li><a href="/pages/tnc.php">Terms & Conditions</a></li> 
                 </ul>
             </div>
             <div class="jej3j-io">1</div> 
         </div>
     </div>
-    <div class="jlojlo main_container"><?php echo site::name;?> 2024</div>
+    <div class="jlojlo">
+        <div class="main_container">2024  &trade; <?php echo site::name;?></div></div>
 
 </section>
 
@@ -69,6 +70,7 @@
   <script>
     const rootStylesCss= getComputedStyle(document.documentElement);
     $(".a-o1").each(function(){var t=parseInt($(this).text());for(let i=1;i<=t;i++)setTimeout((function(){$(this).text(i+(i>=t?"+":""))}).bind(this),10*i)});
+  
   </script>
   <script> jQuery('#waterdrop').raindrops({color: rootStylesCss.getPropertyValue('--bg-color'), canvasHeight:150, density: 0.1, frequency: 20});</script>
 </div>

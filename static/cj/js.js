@@ -1,3 +1,4 @@
+//use https://www.uglifyjs.net/ minifyer
 //reload page after gaining back focus
 window.addEventListener('focus', function() {
      location.reload();
@@ -31,7 +32,7 @@ loader={
     } 
 }
 
-!(function(){
+!(function(ar){
 // Definer ************************************************** */
 
   //get response from https
@@ -58,7 +59,7 @@ loader={
    //create a better lazyload on scroll
     $("[data-srcimg]").each(function(){
         var ts=$(this);
-        setTimeout(function(){
+        ar(function(){
             ts.attr("src",ts.attr("data-srcimg"));
             ts.attr("data-srcimg","");
         },600);
@@ -72,6 +73,7 @@ loader={
 
 
 
+ $(".a-o1").each(function(){var t=parseInt($(this).text());for(let i=1;i<=t;i++)ar((function(){$(this).text(i+(i>=t?"+":""))}).bind(this),10*i)});
 
 
 
@@ -86,5 +88,5 @@ loader={
 
 //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 //end
-}());  
+}(setTimeout));  
  
