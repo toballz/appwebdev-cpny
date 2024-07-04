@@ -1,6 +1,6 @@
 //reload page after gaining back focus
 window.addEventListener('focus', function() {
-    // location.reload();
+     location.reload();
  });
 //BASE URL    
 var bH = document.baseURI;
