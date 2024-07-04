@@ -1,7 +1,7 @@
 <?php
 $rs="0x14";//change to reload css,js,src
 class site{
-    const name="website example name, LLC";
+    const name="example name, LLC";
     //
     static function isSecure(){if((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') || $_SERVER['SERVER_PORT'] == 443){return "https:";}else{return "http:";}}
     /// url(servername|uri|full|domain)

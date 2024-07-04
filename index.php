@@ -9,20 +9,41 @@
         $headKeywords = "";
         include(site::head);?>
     <style type="text/css">
+        @-webkit-keyframes bounceHero { 0% { top: 0px; } 50% { top: 25px; } 100% { top: 0px; } }
+        @keyframes bounceHero { 0% { top: 0px; } 50% { top: 25px; } 100% { top: 0px; } }
     </style>
 </head>
 
 
 
 <body>
-    
-    <header >
+
+    <header style="position:relative;">
         <div class="header-shapes1">
             <div class="header-bg1-shape"></div>
+
+            <div style="position:absolute;top:0;left:0;z-index: 111;width: 100%;height: 100%;">
+                <div class="main_container" style="display:flex;height: 100%;">
+                    <div style="flex:60%;max-width:60%;height: 100%;padding:24px;display:flex;justify-content:center;align-items:center;">
+                        <div style="">
+                            <h1 style="margin:.9rem 0;font-size:2rem;"><p style="margin:0;">Next-Gen</p> Web & App Development Solutions: </h1>
+                            <p style="margin:.9rem 0;">Powering Your Digital Presence</p>
+                            <p style="margin-bottom:1.3rem;">Crafting immersive digital experiences with cutting-edge technologies to elevate your business.</p>
+                            <div>
+                                <a href="" style="border: 2px solid #0167da;color: #0167da; box-shadow: 0 0 1px rgba(0, 0, 0, 0); padding: 16px 25px;width:13rem;border-radius:15px;">Let's Talk about your project</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="flex:40%;max-width:40%;height: 100%;display:flex;align-items:center;justify-content:center;">
+                        <div style="width:210px;position: relative;transform: rotate(316deg);-webkit-animation: bounceHero 3s infinite; animation: bounceHero 3s infinite;"><img src="<?php echo site::staticimg.'/phone.png?'.$rs;?>"/></div>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="main_container  btbt_header" style=" ">
             <?php include(site::header);?>
         </div>
+
     </header> 
  
 
