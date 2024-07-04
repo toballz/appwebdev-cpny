@@ -9,7 +9,7 @@ img{width:100%;vertical-align:middle} form{width:100%;height:100%} a{text-decora
   --info-error: #dd1d1d;
   --info-success: #38f227;
   --info-warning: #ebe644;
-  --info-info: #e5e5e5;
+  --info-info: #ededed;
 } 
 .hr{border-bottom:1px solid #000;width:100%;}
 /* END Define*/

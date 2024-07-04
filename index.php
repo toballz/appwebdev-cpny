@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <?php $rs=62247;
+    <?php $rs= rand(); 
         $headTitle = "";
         $headDescription = "";
         $headKeywords = "";
@@ -27,7 +27,9 @@
         z-index: 0;}
 
 
-        .bragsheet{background-color:#ccc;margin-bottom:4rem;}
+        .bragsheet{background-color:var(--info-info);margin-bottom:4rem;position:relative;}
+        .bragsheet:after{content:"";display:table;width:100%;position:absolute;height:1.76rem;background: linear-gradient(to bottom, rgb(255 255 255 / 0%), #ffffff);
+            bottom:-1px;left:0;}
         .bragsheet1{padding:30px 20px;}
         .bragsheet1 ul{display:flex;}
         .bragsheet1 ul>li{ max-width: 20%;flex: 0 0 20%;text-align:center;}
@@ -48,7 +50,7 @@
         .v-main-tabpad-2 ul{padding-left:1.3rem;}
         .v-main-tabpad-2 ul>li{margin:5px 0 13px;list-style-type: square}
         .a-o1{font-size:3rem;font-weight:700;margin:0;} 
-        .more-o>a{padding:16px;background:red;border-radius:20px;margin:1.6rem 0 16px;text-align:center;color:#fff;}
+        .more-o>a{padding:16px;background:linear-gradient(-47deg, red 0%, #ffa5aa 100%);border-radius:20px;margin:1.6rem 0 16px;text-align:center;color:#fff;}
     </style>
 </head>
 
@@ -83,7 +85,7 @@
             <div class="v-main-tabpad-1">
                 <div class="v-main-tabpad-2">
                     <div style="display:flex;">
-                        <div class="v-main-tabpad-2-img"><img src="<?php echo site::staticimg;?>/www.png?<?php echo $rs;?>"/></div>
+                        <div class="v-main-tabpad-2-img"><img src="<?php echo site::staticimg;?>/web.svg?<?php echo $rs;?>"/></div>
                     </div>
                     <div>
                         <h2>Website</h2>
@@ -96,15 +98,15 @@
                             <li>Advertising Campaign</li>
                             <li>And More</li>
                         </ul>
-                        <li class="more-o"><a href="">Try now</a></li>
+                        <div class="more-o"><a href="">Try now</a></div>
                     </div>
                 </div>
             </div>
             <div class="v-main-tabpad-1">
                 <div class="v-main-tabpad-2">
                     <div style="display:flex;">
-                        <div class="v-main-tabpad-2-img"><img src="<?php echo site::staticimg;?>/android.png?<?php echo $rs;?>"/></div>
-                        <div class="v-main-tabpad-2-img"><img src="<?php echo site::staticimg;?>/ios.png?<?php echo $rs;?>"/></div>
+                        <div class="v-main-tabpad-2-img"><img src="<?php echo site::staticimg;?>/android.svg?<?php echo $rs;?>"/></div>
+                        <div class="v-main-tabpad-2-img"><img src="<?php echo site::staticimg;?>/apple.svg?<?php echo $rs;?>"/></div>
                     </div>
                     <div>
                         <h2>Android/IOS</h2>
@@ -117,14 +119,14 @@
                             <li>Push Notifications</li>
                             <li>And More</li> 
                         </ul>
-                        <li class="more-o"><a href="">Try Now</a></li>
+                        <div class="more-o"><a href="">Try Now</a></div>
                     </div>
                 </div>
             </div>
             <div class="v-main-tabpad-1">
                 <div class="v-main-tabpad-2">
                     <div style="display:flex;">
-                        <div class="v-main-tabpad-2-img"><img src="<?php echo site::staticimg;?>/desktop.png?<?php echo $rs;?>"/></div>
+                        <div class="v-main-tabpad-2-img"><img src="<?php echo site::staticimg;?>/windows.svg?<?php echo $rs;?>"/></div>
                     </div>
                     <div>
                         <h2>Desktop Apps</h2>
@@ -137,7 +139,7 @@
                             <li>Security Features</li>
                             <li>And More</li>
                         </ul>
-                        <li class="more-o"><a href="">Try Now</a></li>
+                        <div class="more-o"><a href="">Try Now</a></div>
                     </div>
                 </div>
             </div>

@@ -12,13 +12,13 @@
     background-color:var(--bg-color) 
 }
 .jej3j{display: flex;
-    padding: 60px 0; color:#fff;}
+    padding: 60px 0 20px; color:#fff;}
 .jej3j-io{flex: 0 0 25%; max-width: 25%;}
 .jej3j-io>h3{margin-bottom:12px}
 .jej3j-io>ul>li>a{padding:4px;margin-bottom:4px;color:#fff;}
 
 
-
+.jlojlo{padding: 12px;}
 
 </style>
 
@@ -49,6 +49,7 @@
             <div class="jej3j-io">1</div> 
         </div>
     </div>
+    <div class="jlojlo main_container"><?php echo site::name;?> 2024</div>
 
 </section>
 
