@@ -14,15 +14,15 @@
 
         .avrey-a{font-weight:600;overflow:hidden;position:relative;border: 2px solid #0167da;color: #0167da; box-shadow: 0 0 1px rgba(0, 0, 0, 0); padding: 16px 25px;width:13rem;border-radius:15px;}
         .avrey-a::before {z-index: -1; content: " "; display: block; position: absolute; top: 0; right: 0; bottom: 0; left: 0;inset: 0 0 0 0; background:  #0167da;
-  transition: transform .5s ease;transition-timing-function:cubic-bezier(0.52, 1.64, 0.37, 0.66); transform: scaleX(0); transform-origin: bottom right;}
-.avrey-a:hover::before { transform: scaleX(1); transform-origin: bottom left;}
-.avrey-a:hover { color:#ffff !important}
+            transition: transform .5s ease;transition-timing-function:cubic-bezier(0.52, 1.64, 0.37, 0.66); transform: scaleX(0); transform-origin: bottom right;}
+        .avrey-a:hover::before { transform: scaleX(1); transform-origin: bottom left;}
+        .avrey-a:hover { color:#ffff !important}
 
-.formschedule{position: relative;;padding:3rem;background:#fff;border-radius:15px; box-shadow: 0 1rem 3rem rgba(0,0,0,.175)!important;}
-.formschedule input,.formschedule textarea{width: 100%; padding: 12px;margin-bottom:24px; box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);border:0; outline: none;}
-.formschedule textarea{height:9rem;}
-.formschedule-submit{transition:.3s all linear;cursor:pointer;background: #F74B54;border-radius:15px;color:#fff;margin-top:15px;padding:.9rem 0 !important;}
-.formschedule-submit:hover{ transform: scale(1.05);}
+        .formschedule{position: relative;padding:3rem;background:#fff;border-radius:15px; box-shadow: 0 1rem 3rem rgba(0,0,0,.175)!important;}
+        .formschedule input,.formschedule textarea{width: 100%; padding: 12px;margin-bottom:24px; box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);border:0; outline: none;}
+        .formschedule textarea{height:9rem;}
+        .formschedule-submit{transition:.3s all linear;cursor:pointer;background: #a61b11;border-radius:15px;color:#fff;margin-top:15px;padding:.9rem 0 !important;}
+        .formschedule-submit:hover{ transform: scale(1.05);}
 </style>
 </head>
 
@@ -137,15 +137,59 @@
         </div>
     </section>
 
+<style>
+.hgr5{position:relative;background:#ff2424;}
+.hgr5-oo{position:absolute;top:-1px;left:0;width:100%;height:9rem;z-index:2; transform: rotate(180deg);padding-top: 3rem;}
+.hgr5-oo-svg{height: 100%;width: 100%;}
 
-    <div style="position:relative;background:red;">
-        <div style="position:absolute;top:-1px;left:0;width:100%;height:9rem;z-index:2; transform: rotate(180deg);padding-top: 3rem;">
-                <svg style="height: 100%;width: 100%;" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" viewBox="0 0 1920 170"><defs><linearGradient x1="49.253%" y1="85.804%" x2="49.253%" y2="43.074%" id="a"><stop stop-color="#FFF" offset="0%"></stop><stop stop-color="#FFF" offset="100%"></stop></linearGradient></defs><g fill="none"><path d="M1920 4.719v69.5c-362.63 60.036-692.797 55.536-990.5-13.5C565.833-23.615 256 12.813 0 170L1 4.719h1919z" fill="url(#a)" transform="rotate(180 960.5 87.36)"></path><path d="M1 170V99c269.033-70.44 603.533-66.44 1003.5 12C1494 207 1921 4.719 1921 4.719L1920 170H1z" fill-opacity=".3" fill="#FFF"></path><path d="M1 170.75V99C373.115 4.216 705.281-4.951 997.5 71.5c365.667 95.667 673.5 73.406 923.5-66.781l-1 166.031H1z" fill-opacity=".3" fill="#FFF"></path><path d="M1 170v-67C400.333-1.333 744.167-19 1032.5 50c432.5 103.5 754 19.219 888.5-45.281l-1 166.031L1 170z" fill-opacity=".35" fill="#FFF"></path></g></svg>
+.hgr5-ia{margin-top:1rem;display:flex; padding: 8rem 12px 35px 0;}
+.hgr5-ia-l{ max-width: 55%;flex: 55%;padding:.8rem 1rem;color:#fff}
+.hgr5-ia-ll{max-width: 45%;flex: 45%; padding:1rem 1rem;}
+@media screen and (max-width:900px){
+    .hgr5-ia{display:block}
+    .hgr5-ia-l, .hgr5-ia-ll{max-width: 100%;width:100%; padding:1rem 1rem;}
+}
+</style>
+
+
+    <div class="hgr5">
+        <div class="hgr5-oo">
+            <svg class="hgr5-oo-svg" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" viewBox="0 0 1920 170"><defs><linearGradient x1="49.253%" y1="85.804%" x2="49.253%" y2="43.074%" id="a"><stop stop-color="#FFF" offset="0%"></stop><stop stop-color="#FFF" offset="100%"></stop></linearGradient></defs><g fill="none"><path d="M1920 4.719v69.5c-362.63 60.036-692.797 55.536-990.5-13.5C565.833-23.615 256 12.813 0 170L1 4.719h1919z" fill="url(#a)" transform="rotate(180 960.5 87.36)"></path><path d="M1 170V99c269.033-70.44 603.533-66.44 1003.5 12C1494 207 1921 4.719 1921 4.719L1920 170H1z" fill-opacity=".3" fill="#FFF"></path><path d="M1 170.75V99C373.115 4.216 705.281-4.951 997.5 71.5c365.667 95.667 673.5 73.406 923.5-66.781l-1 166.031H1z" fill-opacity=".3" fill="#FFF"></path><path d="M1 170v-67C400.333-1.333 744.167-19 1032.5 50c432.5 103.5 754 19.219 888.5-45.281l-1 166.031L1 170z" fill-opacity=".35" fill="#FFF"></path></g></svg>
+        </div>
+        <div id="contactus" class="main_container hgr5-ia">
+
+            <div class="hgr5-ia-l"> 
+                <h1>What we offer</h1>
+                <ul>
+                    <li>Custom Website Development</li>
+                    <li>Website Maintenance and Support</li>
+                    <li>Responsive Web Design</li>
+                    <li>E-commerce Solutions</li>
+                    <li>Beautiful Front-end UI/UX Design  </li>
+                    <li>Back-end Development & Database Integration</li>
+                    <li>SEO Optimization</li>
+                    <li>Security Enhancements</li>
+                    <li>Performance Optimization</li>
+                    <li>Analytics and Reporting</li>
+                    <li>Integration with Third-party Services</li> 
+                    
+                    
+                    <li>Custom Mobile App Design</li>
+                    <li>Native Mobile App Development for IOS/Android</li>
+                    <li>Cross-Platform Mobile App Development</li>
+                    <li>Maintenance and Support</li>
+                    <li>Mobile App Security</li>
+                    <li>Push Notifications</li>
+                    <li>Compliance and Regulations</li> 
+
+
+                    <li>Custom Desktop Application Development</li>
+                    <li>Offline Capabilities</li> 
+                </ul>
             </div>
-        <div style="margin-top:1rem;display:flex; padding: 8rem 12px 35px 0;" id="contactus" class="main_container">
-            <div style="max-width: 60%;flex: 40%;"><br/></div>
-            <div style="max-width: 60%;flex: 40%; padding: 4rem;">
-                <div style="" class="formschedule">
+
+            <div class="hgr5-ia-ll">
+                <div class="formschedule">
                     <h2 style="margin-bottom:24px;text-align:center;font-size:24px;"> Tell us about your business.</h2>
                     
                     <div id="loade1r">
@@ -157,7 +201,7 @@
                     <input type="email" placeholder="Email: mail@example.com **" name="emname"/>
                     <input type="text" placeholder="Phone number **" name="pnumb"/>
                     <textarea placeholder="Explain your app idea. *" name="descr"></textarea>
-                    <input type="button" value="Send Message" class="formschedule-submit"/>
+                    <input type="button" value="Book Consultation" class="formschedule-submit"/>
                     <p style="text-align:center;">By clicking send message, you accept our <a href="/pages/tnc.php" target="_blank">Terms & Privacy Policy</a></p>
                 </div>
             
