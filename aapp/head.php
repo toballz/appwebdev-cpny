@@ -31,4 +31,5 @@
 <link rel="stylesheet" href="static/cj/css.css?<?php echo $rs;?>">
  <!-- t -->
 <style type="text/css"> </style>
-<script>;</script> 
+<script>;</script>
+<meta name="ckros" content="<?php   $_SESSION['vkross']=md5(base64_encode(rand()));echo $_SESSION['vkross'];?>"/>

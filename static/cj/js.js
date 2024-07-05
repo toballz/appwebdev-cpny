@@ -1,10 +1,10 @@
 //use https://www.uglifyjs.net/ minifyer
 //reload page after gaining back focus
 window.addEventListener('focus', function() {
-     location.reload();
+     //location.reload();
  });
 //BASE URL    
-var bH = document.baseURI;
+var ba="ckros" ;
 ///page loader change to what ever
 loader={
     start: function(){$("body").append('<div id="loaderstartstop" style="position:fixed;top:0;left:0;width:100%;height:100%;z-index:1212;background: rgb(0 0 0 / 69%);display:flex;justify-content: center;align-items:center;">'+
@@ -32,7 +32,7 @@ loader={
     } 
 }
 
-!(function(ar){
+!(function(ar,rootStylesCss,bH){
 // Definer ************************************************** */
 
   //get response from https
@@ -57,11 +57,11 @@ loader={
 
    //img lazyload
    //create a better lazyload on scroll
-    $("[data-srcimg]").each(function(){
+    $("[data-imgsrc]").each(function(){
         var ts=$(this);
         ar(function(){
-            ts.attr("src",ts.attr("data-srcimg"));
-            ts.attr("data-srcimg","");
+            ts.attr("src",ts.attr("data-imgsrc"));
+            ts.attr("data-imgsrc","");
         },600);
     });
 
@@ -72,9 +72,26 @@ loader={
  
 
 
-
+//number index page
  $(".a-o1").each(function(){var t=parseInt($(this).text());for(let i=1;i<=t;i++)ar((function(){$(this).text(i+(i>=t?"+":""))}).bind(this),10*i)});
+//submit app description
+$(".formschedule-submit").click(function(){
+    var fname=$('[name="flname"]'),emname=$('[name="emname"]'),pnumb=$('[name="pnumb"]'),descr=$('[name="descr"]'),vc=$('meta[name="'+ba+'"]').attr('content'),err=false;
+    if(fname.val().length  <= 3){
+        err="Invalid name.";
+        fname.css("border","3px solid "+rootStylesCss.getPropertyValue('--info-error'));
+    }
+    if(descr.val().length  <= 3){
+        err="Write a few words about your project.";
+        descr.css("border","3px solid "+rootStylesCss.getPropertyValue('--info-error'));
+    }
 
+
+    if(err){
+        alert(err);
+    }
+    //alert(vc);
+});
 
 
 
@@ -88,5 +105,5 @@ loader={
 
 //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 //end
-}(setTimeout));  
+}(setTimeout,getComputedStyle(document.documentElement)),document.baseURI);  
  

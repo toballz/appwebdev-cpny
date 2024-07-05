@@ -4,8 +4,8 @@
 
 <head>
     <?php $rs= rand(); 
-        $headTitle = "";
-        $headDescription = "";
+        $headTitle = "afd";
+        $headDescription = "asd";
         $headKeywords = "";
         include(site::head);?>
     <style type="text/css">
@@ -18,10 +18,11 @@
 .avrey-a:hover::before { transform: scaleX(1); transform-origin: bottom left;}
 .avrey-a:hover { color:#ffff !important}
 
-.formschedule{padding:3rem;background:#fff;border-radius:15px; box-shadow: 0 1rem 3rem rgba(0,0,0,.175)!important;}
+.formschedule{position: relative;;padding:3rem;background:#fff;border-radius:15px; box-shadow: 0 1rem 3rem rgba(0,0,0,.175)!important;}
 .formschedule input,.formschedule textarea{width: 100%; padding: 12px;margin-bottom:24px; box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);border:0; outline: none;}
 .formschedule textarea{height:9rem;}
-.formschedule-submit{ background: #F74B54;border-radius:15px;color:#fff;margin-top:15px;padding:.9rem 0 !important;}
+.formschedule-submit{transition:.3s all linear;cursor:pointer;background: #F74B54;border-radius:15px;color:#fff;margin-top:15px;padding:.9rem 0 !important;}
+.formschedule-submit:hover{ transform: scale(1.05);}
 </style>
 </head>
 
@@ -46,7 +47,7 @@
                         </div>
                     </div>
                     <div style="flex:40%;max-width:40%;height: 100%;display:flex;align-items:center;justify-content:center;">
-                        <div style="width:210px;position: relative;transform: rotate(316deg);-webkit-animation: bounceHero 3s infinite; animation: bounceHero 3s infinite;"><img src="<?php echo site::staticimg.'/phone.png?'.$rs;?>"/></div>
+                        <div style="width:210px;position: relative;transform: rotate(316deg);-webkit-animation: bounceHero 3s infinite; animation: bounceHero 3s infinite;"><img alt="phone image" data-imgsrc="<?php echo site::staticimg.'/phone.png?'.$rs;?>"/></div>
                     </div>
                 </div>
             </div>
@@ -75,7 +76,7 @@
             <div class="v-main-tabpad-1">
                 <div class="v-main-tabpad-2">
                     <div style="display:flex;">
-                        <div class="v-main-tabpad-2-img"><img src="<?php echo site::staticimg;?>/web.svg?<?php echo $rs;?>"/></div>
+                        <div class="v-main-tabpad-2-img"><img alt="website globe image" data-imgsrc="<?php echo site::staticimg;?>/web.svg?<?php echo $rs;?>"/></div>
                     </div>
                     <div>
                         <h2>Website</h2>
@@ -95,8 +96,8 @@
             <div class="v-main-tabpad-1">
                 <div class="v-main-tabpad-2">
                     <div style="display:flex;">
-                        <div class="v-main-tabpad-2-img"><img src="<?php echo site::staticimg;?>/android.svg?<?php echo $rs;?>"/></div>
-                        <div class="v-main-tabpad-2-img"><img src="<?php echo site::staticimg;?>/apple.svg?<?php echo $rs;?>"/></div>
+                        <div class="v-main-tabpad-2-img"><img alt="android image" data-imgsrc="<?php echo site::staticimg;?>/android.svg?<?php echo $rs;?>"/></div>
+                        <div class="v-main-tabpad-2-img"><img alt="apple image" data-imgsrc="<?php echo site::staticimg;?>/apple.svg?<?php echo $rs;?>"/></div>
                     </div>
                     <div>
                         <h2>Android/IOS</h2>
@@ -116,7 +117,7 @@
             <div class="v-main-tabpad-1">
                 <div class="v-main-tabpad-2">
                     <div style="display:flex;">
-                        <div class="v-main-tabpad-2-img"><img src="<?php echo site::staticimg;?>/windows.svg?<?php echo $rs;?>"/></div>
+                        <div class="v-main-tabpad-2-img"><img alt="windows image" data-imgsrc="<?php echo site::staticimg;?>/windows.svg?<?php echo $rs;?>"/></div>
                     </div>
                     <div>
                         <h2>Desktop Apps</h2>
@@ -146,13 +147,18 @@
             <div style="max-width: 60%;flex: 40%; padding: 4rem;">
                 <div style="" class="formschedule">
                     <h2 style="margin-bottom:24px;text-align:center;font-size:24px;"> Tell us about your business.</h2>
+                    
+                    <div id="loade1r">
+                        <div id="bo1x"></div>
+                        <div id="hil1l"></div>
+                    </div>
 
-                    <input type="text" placeholder="First & Last Name *"/>
-                    <input type="email" placeholder="Email: mail@example.com *"/>
-                    <input type="text" placeholder="Phone number"/>
-                    <textarea placeholder="Explain your app idea."></textarea>
+                    <input type="text" placeholder="First & Last Name *" name="flname"/>
+                    <input type="email" placeholder="Email: mail@example.com **" name="emname"/>
+                    <input type="text" placeholder="Phone number **" name="pnumb"/>
+                    <textarea placeholder="Explain your app idea. *" name="descr"></textarea>
                     <input type="button" value="Send Message" class="formschedule-submit"/>
-                    <p style="text-align:center;">By clicking send message, you accept our <a href="">Terms & Privacy Policy</a></p>
+                    <p style="text-align:center;">By clicking send message, you accept our <a href="/pages/tnc.php" target="_blank">Terms & Privacy Policy</a></p>
                 </div>
             
             </div>

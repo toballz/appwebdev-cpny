@@ -4,21 +4,16 @@ img{width:100%;vertical-align:middle} form{width:100%;height:100%} a{text-decora
 
 /* Define*/
 :root {
-  --bg-color: #15194b;  
+  --bg-color: #ff3939;  
   --info-error: #dd1d1d;
   --info-success: #38f227;
   --info-warning: #ebe644;
   --info-info: #ededed;
 } 
 .hr{border-bottom:1px solid #000;width:100%;}
-/* END Define*/
-
-
-
-
+/* END Define*/ 
 .main_container{position:relative;width: 100%;max-width: 1400px;margin: auto;padding: 12px;}
-
-
+ 
 
 
 
@@ -37,7 +32,7 @@ img{width:100%;vertical-align:middle} form{width:100%;height:100%} a{text-decora
 }
 .header-bg1-shape{ position: absolute;
 height: 160%; width: 80%; display: block;
-border-radius: 120px; background: linear-gradient(-47deg, #F956CB 0%, #F74B54 100%);
+border-radius: 120px; background:linear-gradient(342deg, var(--bg-color) 0%, #ff8e94 100%);
 bottom: 0; right: 0;
 -webkit-transform: translate(35%,-28%) rotate(-35deg); transform: translate(35%,-28%) rotate(-35deg);
 z-index: 0;}
@@ -73,24 +68,18 @@ z-index: 0;}
   transition: transform .5s ease;transition-timing-function:cubic-bezier(0.52, 1.64, 0.37, 0.66); transform: scaleX(0); transform-origin: bottom right;}
 .more-o>a:hover::before { transform: scaleX(1); transform-origin: bottom left;}
 
+
+#bo1x,#hil1l{position:absolute;}
+#loade1r{position:absolute;top:0;right:0;margin-top:-2.7em;margin-left:-2.7em;width:5.4em;height:5.4em;background-color:#fff; border-radius:12px;}
+#hil1l{width:6.2em;height:5.1em;top:2.7em;left:1.7em;border-left:.25em solid #000;transform:rotate(45deg)}
+#bo1x{left:0;bottom:-0.6em;width:1em;height:1em;border:.25em solid #000;border-radius:15%;transform:translate(0,-1em) rotate(-45deg);
+    animation:2.5s cubic-bezier(.79,0,.47,.97) infinite push}
+@keyframes push{0%{transform:translate(0,-1em) rotate(-45deg)}5%{transform:translate(0,-1em) rotate(-50deg)}20%{transform:translate(1em,-2em) rotate(47deg)}25%{transform:translate(1em,-2em) rotate(45deg)}30%{transform:translate(1em,-2em) rotate(40deg)}45%{transform:translate(2em,-3em) rotate(137deg)}50%{transform:translate(2em,-3em) rotate(135deg)}55%{transform:translate(2em,-3em) rotate(130deg)}70%{transform:translate(3em,-4em) rotate(217deg)}75%{transform:translate(3em,-4em) rotate(220deg)}100%{transform:translate(0,-1em) rotate(-225deg)}}
+
 /*index 0*/
 
 
 
-/*
+ 
 
-#hil1l,#hil1l:after{width:7.1em;height:7.1em}
-#hil1l:after,#loade1r {background-color:#fff}
-#bo1x,#hil1l{position:absolute;background-color:transparent}
-#loade1r{position:absolute;top:50%;left:50%;margin-top:-2.7em;margin-left:-2.7em;width:5.4em;height:5.4em}
-#hil1l{top:1.7em;left:1.7em;border-left:.25em solid #000;transform:rotate(45deg)}
-#hil1l:after{content:'';position:absolute;left:0}
-#bo1x{left:0;bottom:-0.1em;width:1em;height:1em;border:.25em solid #000;border-radius:15%;transform:translate(0,-1em) rotate(-45deg);animation:2.5s cubic-bezier(.79,0,.47,.97) infinite push}
-@keyframes push{0%{transform:translate(0,-1em) rotate(-45deg)}5%{transform:translate(0,-1em) rotate(-50deg)}20%{transform:translate(1em,-2em) rotate(47deg)}25%{transform:translate(1em,-2em) rotate(45deg)}30%{transform:translate(1em,-2em) rotate(40deg)}45%{transform:translate(2em,-3em) rotate(137deg)}50%{transform:translate(2em,-3em) rotate(135deg)}55%{transform:translate(2em,-3em) rotate(130deg)}70%{transform:translate(3em,-4em) rotate(217deg)}75%{transform:translate(3em,-4em) rotate(220deg)}100%{transform:translate(0,-1em) rotate(-225deg)}}
-
-
-<div id="loade1r">
-  <div id="bo1x"></div>
-  <div id="hil1l"></div>
-</div>
-*/
+ 

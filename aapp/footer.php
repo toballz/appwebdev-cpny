@@ -8,9 +8,7 @@
 #waterdrop canvas {
     bottom: -70px !important;
 }
-.underWaterdropp{padding:12px;
-    background-color:var(--bg-color) 
-}
+.underWaterdropp{padding:12px; background-color:#171b51}
 .jej3j{display: flex;
     padding: 60px 0 20px; color:#fff;}
 .jej3j-io{flex: 0 0 25%; max-width: 25%;}
@@ -67,10 +65,8 @@
 
   <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
   <script src="/static/cj/raindrops.js?<?php echo $rs;?>"></script>
-  <script>
-    const rootStylesCss= getComputedStyle(document.documentElement);
-    $(".a-o1").each(function(){var t=parseInt($(this).text());for(let i=1;i<=t;i++)setTimeout((function(){$(this).text(i+(i>=t?"+":""))}).bind(this),10*i)});
+  <script> 
   
   </script>
-  <script> jQuery('#waterdrop').raindrops({color: rootStylesCss.getPropertyValue('--bg-color'), canvasHeight:150, density: 0.1, frequency: 20});</script>
+  <script> jQuery('#waterdrop').raindrops({color: "#131642", canvasHeight:150, density: 0.1, frequency: 20});</script>
 </div>
