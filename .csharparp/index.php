@@ -1,7 +1,9 @@
-<?php include_once("../../co.php");$rS="0xd";
+<?php include_once("../../co.php");$rS="0xdxx";
 
 $isSession=false;
-if(isset($_SESSION['logkin']) && $_SESSION['logkin'] == "ok" ){$isSession=true;}?>
+if(isset($_SESSION['logkin']) && $_SESSION['logkin'] == "ok" ){$isSession=true;}else{
+    exit('<script src="./sharparp.js?<?php echo $rS;?>"></script>logout<script>setTimeout(function(){sharparp.push({title:sharparp.option.title.setlogout,value: "/index.php"});}, 3000);</script>');
+}?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -28,33 +30,15 @@ if(isset($_SESSION['logkin']) && $_SESSION['logkin'] == "ok" ){$isSession=true;}
     <link rel="stylesheet" href="./css.css?<?php echo $rS;?>">
     <script src="./sharparp.js?<?php echo $rS;?>"></script>
     <!-- t -->
-    <?php if($isSession){?><style type="text/css">
+    <style type="text/css">
         input{padding-top:12px!important;padding-bottom:12px!important}.bottom-navbar{position:fixed;bottom:0;width:100%;z-index:6;justify-content:space-around}footer{margin-top:7rem}.top-navbar{position:relative}[data-pageswitchref]{display:none}.nav-item{flex:1;text-align:center}.nav-link{text-align:center;font-weight:600;flex:1}.bi{font-size:19px;padding-right:5px;padding-left:5px}.list-group.settingsj>a{padding:15px}.settingsj-sunmoon{display:flex;justify-content:space-between}.schld-days-ofweek{display:flex;align-items:center;margin-bottom:12px}.schld-days-ofweek>label{flex:0 0 100px;margin-bottom:0}.schld-days-ofweek>input{flex:1;color:#00f!important}.pignose-calendar{width:100%!important;max-width:100%}.navb-fs{font-size:12px!important}.listeceiptul{padding-left:20px;padding-right:20px}.listeceiptul>li{display:flex;margin-top:12px}.listeceiptul>li>span:first-child{flex:1;font-weight:700}.listeceiptul>li>span:nth-child(2){flex:2}
-    </style><?php }else{?>
-
-    <style>
-        body { font-family: Arial,sans-serif;background: linear-gradient(120deg,#3498db,#8e44ad);display: flex;justify-content: center;align-items: center;height: 100vh;margin: 0}
-
-        .login-container {background: #fff;padding: 30px;border-radius: 10px;box-shadow: 0 4px 8px rgba(0,0,0,.1);max-width: 400px;width: 100%;text-align: center}
-
-            .login-container h2 {margin-bottom: 20px;color: #333}
-
-            .login-container input {width: calc(100% - 20px);padding: 16px;margin: 10px 0;border: 1px solid #ccc;border-radius: 5px}
-
-            .login-container button {padding: 14px 20px;width: 100%;margin-top: 20px;background: #3498db;color: #fff;border: none;border-radius: 5px;cursor: pointer;font-size: 16px}
-
-                .login-container button:hover {background: #2980b9}
-
-            .login-container p {font-size: 12px;text-align: left;margin-bottom: 1px}
     </style>
-    <?php }?>
     <script>;</script> 
 
 </head>
 
 
 <body>
-<?php if($isSession){?>
 
     <header></header>
 
@@ -166,17 +150,7 @@ if(isset($_SESSION['logkin']) && $_SESSION['logkin'] == "ok" ){$isSession=true;}
 
     <footer></footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js?<?php echo $rS;?>"></script>
- 
-
-<?php }else{?>
-
-    <div class="login-container"><h2>Login</h2><p>Email: mail@example.com</p><input type="email" id="hhemail" placeholder="Email: mail@example.com" /><br><p>Password: *****</p><input type="password" id="hhpassword" placeholder="Password"><br><button type="button" class="btnLoginC">Login</button></div> 
-
-
-
-<?php }?>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js?<?php echo $rS;?>"></script> 
     <script src="./datepicker4/js/pignose.calendar.full.min.js?<?php echo $rS;?>"></script>
     <script type="text/javascript" src="./js.js?<?php echo $rS;?>"></script>
 </body>
