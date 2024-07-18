@@ -21,7 +21,7 @@
         .formschedule{position: relative;padding:3rem;background:#fff;border-radius:15px; box-shadow: 0 1rem 3rem rgba(0,0,0,.175)!important;}
         .formschedule input,.formschedule textarea{width: 100%; padding: 12px;margin-bottom:24px; box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);border:0; outline: none;}
         .formschedule textarea{height:9rem;}
-        .formschedule-submit{transition:.3s all linear;cursor:pointer;background: #a61b11;border-radius:15px;color:#fff;margin-top:15px;padding:.9rem 0 !important;}
+        .formschedule-submit{transition:.3s all linear;cursor:pointer;background: #ff2424;border-radius:15px;color:#fff;margin-top:15px;padding:.9rem 0 !important;}
         .formschedule-submit:hover{ transform: scale(1.05);}
 </style>
 </head>
@@ -47,7 +47,7 @@
                         </div>
                     </div>
                     <div style="flex:40%;max-width:40%;height: 100%;display:flex;align-items:center;justify-content:center;">
-                        <div style="width:210px;position: relative;transform: rotate(316deg);-webkit-animation: bounceHero 3s infinite; animation: bounceHero 3s infinite;"><img alt="phone image" data-imgsrc="<?php echo site::staticimg.'/phone.png?'.$rs;?>"/></div>
+                        <div style="width:710px;position: relative;=transform: rotate(316deg);-webkit-animation: bounceHero 3s infinite; animation: bounceHero 3s infinite;"><img alt="phone image" data-imgsrc="<?php echo site::staticimg.'/phone1r.png?'.$rs;?>"/></div>
                     </div>
                 </div>
             </div>
@@ -59,19 +59,7 @@
     </header> 
  
 
-    <section class="  " style=" ">
-        <div class="bragsheet">
-            <div class="main_container bragsheet1">
-                <ul>
-                    <li><p class="a-o1">300</p><p>Websites</p></li>
-                    <li><p class="a-o1">50</p><p>Android Apps</p></li>
-                    <li><p class="a-o1">50</p><p>IOS Apps</p></li>
-                    <li><p class="a-o1">100</p><p>Windows Apps</p></li>
-                    <li><p class="a-o1">50</p><p>Mac Apps</p></li>
-                </ul>
-            </div>
-        </div>
-        
+    <section class="  ">
         <div class="main_container v-main-tabpad">
             <div class="v-main-tabpad-1">
                 <div class="v-main-tabpad-2">
@@ -83,13 +71,14 @@
                         <ul>
                             <li>SEO Optimization</li>
                             <li>Responsive Design</li>
-                            <li>E-commerce Integration</li>
+                            <li>E-commerce Solutions</li>
                             <li>Analytics and Reporting</li>
                             <li>Security Features</li>
                             <li>Advertising Campaign</li>
+                            <li>Website Maintenance and Support</li>
                             <li>And More</li>
                         </ul>
-                        <div class="more-o"><a href="#contactus">Try now</a></div>
+                        <div class="more-o"><a href="#contactus">Talk to Us</a></div>
                     </div>
                 </div>
             </div>
@@ -104,13 +93,14 @@
                         <ul>
                             <li>Cross-Platform Compatibility</li>
                             <li>Data Encryption and Security</li>
-                            <li>Responsive Design</li>
+                            <li>Custom App Development</li>
                             <li>Calendar and Events</li>
                             <li>In-App Purchases</li>
                             <li>Push Notifications</li>
+                            <li>Offline Capabilities</li>
                             <li>And More</li> 
                         </ul>
-                        <div class="more-o"><a href="#contactus">Try Now</a></div>
+                        <div class="more-o"><a href="#contactus">Talk to Us</a></div>
                     </div>
                 </div>
             </div>
@@ -125,20 +115,32 @@
                             <li>Cross-Platform Compatibility</li>
                             <li>Responsive User Interface</li>
                             <li>System Services</li>
-                            <li>SEO Optimization</li>
+                            <li>API Calls</li>
                             <li>Security Features</li>
                             <li>Security Features</li>
                             <li>And More</li>
                         </ul>
-                        <div class="more-o"><a href="#contactus">Try Now</a></div>
+                        <div class="more-o"><a href="#contactus">Talk to Us</a></div>
                     </div>
                 </div>
+            </div>
+        </div>
+        
+        <div class="bragsheet">
+            <div class="main_container bragsheet1">
+                <ul>
+                    <li><p class="a-o1">300</p><p>Websites</p></li>
+                    <li><p class="a-o1">50</p><p>Android Apps</p></li>
+                    <li><p class="a-o1">50</p><p>IOS Apps</p></li>
+                    <li><p class="a-o1">100</p><p>Windows Apps</p></li>
+                    <li><p class="a-o1">50</p><p>Mac Apps</p></li>
+                </ul>
             </div>
         </div>
     </section>
 
 <style>
-.hgr5{position:relative;background:#ff2424;}
+.hgr5{position:relative;background: linear-gradient(to bottom, #ff2424, #fff);margin-bottom:12px;}
 .hgr5-oo{position:absolute;top:-1px;left:0;width:100%;height:9rem;z-index:2; transform: rotate(180deg);padding-top: 3rem;}
 .hgr5-oo-svg{height: 100%;width: 100%;}
 
@@ -161,30 +163,7 @@
             <div class="hgr5-ia-l"> 
                 <h1>What we offer</h1>
                 <ul>
-                    <li>Custom Website Development</li>
-                    <li>Website Maintenance and Support</li>
-                    <li>Responsive Web Design</li>
-                    <li>E-commerce Solutions</li>
-                    <li>Beautiful Front-end UI/UX Design  </li>
-                    <li>Back-end Development & Database Integration</li>
-                    <li>SEO Optimization</li>
-                    <li>Security Enhancements</li>
-                    <li>Performance Optimization</li>
-                    <li>Analytics and Reporting</li>
-                    <li>Integration with Third-party Services</li> 
-                    
-                    
-                    <li>Custom Mobile App Design</li>
-                    <li>Native Mobile App Development for IOS/Android</li>
-                    <li>Cross-Platform Mobile App Development</li>
-                    <li>Maintenance and Support</li>
-                    <li>Mobile App Security</li>
-                    <li>Push Notifications</li>
-                    <li>Compliance and Regulations</li> 
-
-
-                    <li>Custom Desktop Application Development</li>
-                    <li>Offline Capabilities</li> 
+                    <li>Custom Website Development</li> 
                 </ul>
             </div>
 

@@ -77,9 +77,17 @@ loader={
 //submit app description
 $(".formschedule-submit").click(function(){
     var fname=$('[name="flname"]'),emname=$('[name="emname"]'),pnumb=$('[name="pnumb"]'),descr=$('[name="descr"]'),vc=$('meta[name="'+ba+'"]').attr('content'),err=false;
+    emname.add(descr).add(fname).css("border","none");
+      
+    
     if(fname.val().length  <= 3){
         err="Invalid name.";
         fname.css("border","3px solid "+rootStylesCss.getPropertyValue('--info-error'));
+    }
+    var so=emname.val().split("@");
+    if((emname.val().length  <= 3) || (so.length < 2) || (so[1].length < 5) || (so[1].indexOf(".") === -1)){
+        err="Input a valid email";
+        emname.css("border","3px solid "+rootStylesCss.getPropertyValue('--info-error'));
     }
     if(descr.val().length  <= 3){
         err="Write a few words about your project.";
