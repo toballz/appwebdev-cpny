@@ -1,7 +1,9 @@
+
 {
   "version": "1.0.0",
   "myappnameindex": "159742f243a05f0733d5d6497fd3f947.dev",
-  "folder": "",
+  "folder": "/159742f243a05f0733d5d6497fd3f947/app",
+  "apipath": "/apim.php",
   "install": [
     "index.php",
     "bootstrap_5.3.3.min.css",
