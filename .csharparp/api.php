@@ -1,74 +1,70 @@
 <?php
-include_once("../../co.php");
-
+include_once("../co.php");
 header('Content-Type: application/json');
-$isSession=false;$_SESSION['logkin'] ="ok";
-if(isset($_SESSION['logkin']) && $_SESSION['logkin'] == "ok" ){$isSession=true;} 
-
-function setCrossSite(){
-    $_SESSION['crosssite']=md5(rand()+time());
-}
-function getCrossSite(){
-    return isset($_SESSION['crosssite'])?$_SESSION['crosssite']:false;
-}
 ?>
+
 <?php 
-$response=array();
 
-  
-if( isset($_POST['cros']) && $_POST["cros"] != ""){
+ 
+$u=array();
+if(isset($_POST['v']) && $_POST['v']=="1"){
 
-    if(isset($_POST['getDatesAppointmentsSpecDate']) && isset($_POST['dateFrom']) && $isSession){
+
+    if(isset($_POST['getDatesAppointmentsSpecDate']) && isset($_POST['dateFrom'])){
         $tg=db::stmt("SELECT `hairstyle`,`image`,`hairstyle`,`rida`,`date`,`time` FROM schedulee WHERE `date` = '".$_POST['dateFrom']."' AND `haspaid`='1';");
  
         $i=0;
         while($rr=mysqli_fetch_assoc($tg)){
             $rd=DateTime::createFromFormat('Ymd', $rr['date']);
  
-            $response[$i]['imageUrl']=  site::url(1)."/img/".$rr['image'].".jpg?93jv"; 
-            $response[$i]['datetime']= $rd->format('Y F, l jS')." ".$rr['time'];
-            $response[$i]['hairname']=$rr['hairstyle'];
-            $response[$i]['orderId']=$rr['rida'];
+            $u[$i]['imageUrl']=  site::url(1)."/img/".$rr['image'].".jpg?93jv"; 
+            $u[$i]['datetime']= $rd->format('Y F, l jS')." ".$rr['time'];
+            $u[$i]['hairname']=$rr['hairstyle'];
+            $u[$i]['orderId']=$rr['rida'];
               
             $i++; 
         }
     }
-    if(isset($_POST['getDatesAppointmentsMoreThanDate']) && isset($_POST['dateTo']) && $isSession){
+    if(isset($_POST['getDatesAppointmentsMoreThanDate']) && isset($_POST['dateTo'])){
         $tg=db::stmt("SELECT `date` FROM schedulee WHERE `date` >= '".trim($_POST['dateTo'])."' AND `haspaid`='1' LIMIT 13;");
-         
-         $response['code']=200;
+        $i=0;
         while($rr=mysqli_fetch_assoc($tg)){
-            $response['message'][]=$rr['date']; 
+            $rd=DateTime::createFromFormat('Ymd', $rr['date']);
+            $u[$i]['year']=$rd->format('Y'); 
+            $u[$i]['month']=$rd->format('m');
+            $u[$i]['day']=$rd->format('j');
+              
+            $i++; 
         }
     }
-    if(isset($_POST['getweeklyStatic']) && isset($_POST['had']) && $isSession){
+    if(isset($_POST['getweeklyStatic']) && isset($_POST['had'])){
         $tg=db::stmt("SELECT `description` FROM `availability` WHERE `namer`='weekly' AND `id`='1';");
  
         while($rr=mysqli_fetch_assoc($tg)){
-            $response=json_decode($rr['description']);
+            $u=json_decode($rr['description']); 
                
         }
     }
-    if(isset($_POST['updatesWeekly']) && isset($_POST['ajr']) && $isSession){
+    if(isset($_POST['updatesWeekly']) && isset($_POST['ajr'])){
         $yfs="UPDATE `availability` SET `description`='".mysqli_real_escape_string(db::conn(),$_POST['updatesWeekly'])."' WHERE `namer`='weekly';";
         $tg=db::stmt($yfs);
         //echo $yfs;
-        $response=array('a'=>true);
+        $u=array('a'=>true);
     }
     
-    if(isset($_POST['receiptIIinfo']) && isset($_POST['j']) && $isSession){
-        $tg=db::stmt("SELECT `price`,`time`,`hairstyle`,`email`,`phonne`,`customername`,`image`,`date`  FROM `schedulee` WHERE `rida`='".$_POST['receiptIIinfo']."' AND `haspaid`='1' ;");
-        $response=mysqli_fetch_assoc($tg);
+    if(isset($_POST['receiptIIinfo']) && isset($_POST['j'])){
+        $tg=db::stmt("SELECT `price`,`time`,`hairstyle`,`email`,`phonne`,`customername`,`image`  FROM `schedulee` WHERE `rida`='".$_POST['receiptIIinfo']."' AND `haspaid`='1' ;");
+        $u=mysqli_fetch_assoc($tg);
     }
-    if(isset($_POST['getOverrideDates']) && isset($_POST['va']) && $isSession){
+    if(isset($_POST['getOverrideDates']) && isset($_POST['va'])){
         $tg=db::stmt("SELECT `description` FROM `availability` WHERE `namer`='override';");
-        $response=json_decode(mysqli_fetch_assoc($tg)['description']);
+        $u=json_decode(mysqli_fetch_assoc($tg)['description']);
     }
 
 
-    //
-    //
-    if(isset($_POST['stats']) && isset($_POST['sg']) && isset($_POST['beginingOfThisMonth']) && isset($_POST['beginingOfLastMonth']) && $isSession){
+//
+//
+    if(isset($_POST['stats']) && isset($_POST['sg']) && isset($_POST['beginingOfThisMonth']) && isset($_POST['beginingOfLastMonth'])){
         $botm=trim($_POST['beginingOfThisMonth']);$botmbs=$botm+30;
         $bolm=trim($_POST['beginingOfLastMonth']); 
         $tg=db::stmt("SELECT 
@@ -81,17 +77,20 @@ if( isset($_POST['cros']) && $_POST["cros"] != ""){
         $tg2=db::stmt("SELECT `hairstyle`,`image`, COUNT(*) AS appearance_count FROM schedulee  WHERE `haspaid`='1' GROUP BY `hairstyle` ORDER BY appearance_count DESC LIMIT 5");
             // 
         while($yts=mysqli_fetch_assoc($tg2)){
-            $response['popularHairstyleBooked'][]=$yts; 
+            $u['popularHairstyleBooked'][]=$yts; 
         }
         while($ys=mysqli_fetch_assoc($tg)){
-            $response['beginingOfThisMonth']=$ys['beginingOfThisMonth'];
-            $response['lastMonth']=$ys['lastMonth'];
-            $response['allToDate']=$ys['allToDate'];
+            $u['beginingOfThisMonth']=$ys['beginingOfThisMonth'];
+            $u['lastMonth']=$ys['lastMonth'];
+            $u['allToDate']=$ys['allToDate'];
         }
+
+
+        
     }
 
     //select date time
-    if(isset($_POST['select_time_forDate']) &&  $_POST['getDate4Thd'] != "" && $isSession){
+    if(isset($_POST['select_time_forDate']) &&  $_POST['getDate4Thd'] != ""){
 
         $thisDAte=trim($_POST['getDate4Thd']);
         
@@ -150,21 +149,14 @@ if( isset($_POST['cros']) && $_POST["cros"] != ""){
                }
             };
             
-            $response=$times_to_show_from_weekly;
+            $u=$times_to_show_from_weekly;
         }
     }
     
-    
-    //sign log out
-    if(isset($_POST['signlogout']) &&  $_POST['signlogout'] == "0" && $isSession){
-        $_SESSION['logkin']=[];
-        unset($_SESSION['logkin']);
-        $response['code']=200;
-        $response['message']="ok";
-    }
+
 
     //select date time
-    if(isset($_POST['save_contacts_64e']) && isset($_POST['co']) && isset($_POST['ord']) && $isSession){
+    if(isset($_POST['save_contacts_64e']) && isset($_POST['co']) && isset($_POST['ord'])){
         
         $hair=array_map('trim',explode("#",$_POST['ord']));
         $contactInfo=json_decode($_POST['co']);
@@ -199,18 +191,18 @@ if( isset($_POST['cros']) && $_POST["cros"] != ""){
          $js = db::stmt($yhd);
 
         $payLink=tools::stripe_Create_Dynamic_Link_for_payments($contactInfo->email, 50.00, $ridaa,$contactInfo->fullname);
-        $response['code']=301;
-        $response['link']=$payLink;
+        $u['code']=301;
+        $u['link']=$payLink;
 
     }
 
  //set override dates [{},{}]
- if(isset($_POST['updateOverrided']) && isset($_POST['cat']) && $_POST['cat'] != "" && $isSession){
+ if(isset($_POST['updateOverrided']) && isset($_POST['cat']) && $_POST['cat'] != ""){
         $cat4=trim($_POST['cat']);
     $he=db::stmt("UPDATE `availability` SET `description` = '$cat4' WHERE `id` = '3' AND `namer`='override';");
     
-    $response['code']=200;
-    $response['message']="ok";
+    $u['code']=200;
+    $u['message']="ok";
 
 }
     //delete appointment date haspaid=14
@@ -218,65 +210,58 @@ if( isset($_POST['cros']) && $_POST["cros"] != ""){
         $cat4=trim($_POST['ksy']);
     $he=db::stmt("UPDATE `schedulee` SET `haspaid` = '14' WHERE `schedulee`.`rida` = '$cat4';");
 
-    $response['code']=200;
-    $response['message']="ok";
+    $u['code']=200;
+    $u['message']="ok";
 
     }
     
 
+
+//get message notification
+if(isset($_POST['get_messageNotifiy']) && isset($_POST['a'])){
+    $afa=db::stmt("SELECT `description` FROM `availability` WHERE `id` = '4' AND `namer`='message_notification';");
+
+        $u=json_decode(mysqli_fetch_assoc($afa)['description']);
+}
+
+
+
+   //login    
+   if(isset($_POST['logine']) && isset($_POST['password']) && isset($_POST['email'])){
+  
+    $emal=db::escapeDB(base64_decode($_POST['email']));
+    $pasw=md5(base64_decode($_POST['password']));
     
-    //get message notification
-    if(isset($_POST['get_messageNotifiy']) && isset($_POST['a']) && $isSession){
-        $afa=db::stmt("SELECT `description` FROM `availability` WHERE `id` = '4' AND `namer`='message_notification';");
-    
-            $response=json_decode(mysqli_fetch_assoc($afa)['description']);
+    $yhd="SELECT `id` FROM `availability` WHERE `accountEmail`='$emal' AND `accountPassword`='$pasw' AND `description`='--user';";
+    //echo $yhd;
+    $js = db::stmt($yhd);
+    if(mysqli_num_rows($js) > 0){
+        $u['code']=200;
+        $u['message']="good";
+    }else{
+        $u['code']=400;
+        $u['message']="username or password is wrong";
     }
+}
 
-
-
-    //login    
-    if(isset($_POST['logine']) && isset($_POST['password']) && isset($_POST['email'])){
-        $emal=db::escapeDB(base64_decode($_POST['email']));
-        $pasw=md5(base64_decode($_POST['password']));
-        
-        $yhd="SELECT `id` FROM `availability` WHERE `accountEmail`='$emal' AND `accountPassword`='$pasw' AND `description`='--user';";
-        //echo $yhd;
-        $js = db::stmt($yhd);
-        $isLoggedIn=(mysqli_num_rows($js) > 0);
-        if($isLoggedIn){
-            $response['code']=200;
-            $response['message']="good";
-            $_SESSION['logkin'] = "ok";
-        }else{
-            $response['code']=400;
-            $response['message']="username or password is wrong";
-        }
+//check subscription
+if(isset($_POST['subscribed']) && isset($_POST['subscribed1']) && isset($_POST['subscribedr'])){
+    $yhd="SELECT `description` FROM `availability` WHERE `namer`='hasSubscribeMonthly' AND `id`='5';";
+    //echo $yhd;
+    $js = db::stmt($yhd);
+    if(mysqli_fetch_assoc($js)['description'] == "true"){
+        $u['code']=200;
+        $u['message']="subscribed";
+    }else{
+        $u['code']=400;
+        $u['message']="not subscribed";
     }
-
-    //check subscription
-    if(isset($_POST['subscribed']) && isset($_POST['subscribed1']) && isset($_POST['subscribedr']) && $isSession){
-        $yhd="SELECT `description` FROM `availability` WHERE `namer`='hasSubscribeMonthly' AND `id`='5';";
-        //echo $yhd;
-        $js = db::stmt($yhd);
-        if(mysqli_fetch_assoc($js)['description'] == "true"){
-            $response['code']=200;
-            $response['message']="subscribed";
-        }else{
-            $response['code']=400;
-            $response['message']="not subscribed";
-        }
-    }
+}
 
 
-
-
-
-//end all
-    echo json_encode($response);
 
     
-}else{
-    echo json_encode(array("err"=>md5(rand())));
+    echo json_encode($u);
 }
 
 

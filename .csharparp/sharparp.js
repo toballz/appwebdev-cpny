@@ -1,13 +1,21 @@
-//https://www.toptal.com/developers/javascript-minifier
-var schema="jk",dhost="159742f243a05f0733d5d6497fd3f947",d="/",datt=[], sharparp={
+var schema="jk", d="/",
+sharparp={
     push: function(datt){
-        window.location.href= schema+":"+d+d+dhost+d+btoa(JSON.stringify(datt));
+        if(Object.keys(datt).length >= 2 ){
+            window.location.href= schema+":"+d+d+(Math.random().toString(36).substring(2, 2 + 6))+d+btoa(JSON.stringify(datt));
+        }else{
+            throw new Error('Message:- sharparp data empty'+
+                '\nData:- '+JSON.stringify(datt)+
+                "\nLength:- "+Object.keys(datt).length);
+        }
     },
 
     option:{
         title:{
             href:"href",
-            setlogout:"setlogout"
+            setlogout: "setlogout",
+            toast: "toast",
+            snackbar: "snackbar",
 
         }
     }
