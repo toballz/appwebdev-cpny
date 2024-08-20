@@ -19,7 +19,7 @@
         .avrey-a:hover { color:#ffff !important}
 
         .formschedule{position: relative;padding:3rem;background:#fff;border-radius:15px; box-shadow: 0 1rem 3rem rgba(0,0,0,.175)!important;}
-        .formschedule input,.formschedule textarea{width: 100%; padding: 12px;margin-bottom:24px; box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);border:0; outline: none;}
+        .formschedule .whatapp-c, .formschedule input,.formschedule textarea{width: 100%; padding: 12px;margin-bottom:24px; box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);border:0; outline: none;}
         .formschedule textarea{height:9rem;}
         .formschedule-submit{transition:.3s all linear;cursor:pointer;background: #ff2424;border-radius:15px;color:#fff;margin-top:15px;padding:.9rem 0 !important;}
         .formschedule-submit:hover{ transform: scale(1.05);}
@@ -78,7 +78,7 @@
                             <li>Website Maintenance and Support</li>
                             <li>And More</li>
                         </ul>
-                        <div class="more-o"><a href="#contactus">Talk to Us</a></div>
+                        <div class="more-o"><a href="#contactus" onclick="$('.whatapp-c').val('app-website');">Talk to Us</a></div>
                     </div>
                 </div>
             </div>
@@ -100,7 +100,7 @@
                             <li>Offline Capabilities</li>
                             <li>And More</li> 
                         </ul>
-                        <div class="more-o"><a href="#contactus">Talk to Us</a></div>
+                        <div class="more-o"><a href="#contactus" onclick="$('.whatapp-c').val('app-mobile');">Talk to Us</a></div>
                     </div>
                 </div>
             </div>
@@ -120,7 +120,7 @@
                             <li>Security Features</li>
                             <li>And More</li>
                         </ul>
-                        <div class="more-o"><a href="#contactus">Talk to Us</a></div>
+                        <div class="more-o"><a href="#contactus" onclick="$('.whatapp-c').val('app-desktop');">Talk to Us</a></div>
                     </div>
                 </div>
             </div>
@@ -179,9 +179,15 @@
                     <input type="text" placeholder="First & Last Name *" name="flname"/>
                     <input type="email" placeholder="Email: mail@example.com **" name="emname"/>
                     <input type="text" placeholder="Phone number **" name="pnumb"/>
+                    <select name="whatapp" class="whatapp-c">
+                        <option value="o--o">What app do you want?</option>
+                        <option value="app-mobile">Creating Mobile App</option>
+                        <option value="app-website">Creating a Website</option>
+                        <option value="app-desktop">Creating Desktop App</option>
+                    </select>
                     <textarea placeholder="Explain your app idea. *" name="descr"></textarea>
                     <input type="button" value="Book Consultation" class="formschedule-submit"/>
-                    <p style="text-align:center;">By clicking send message, you accept our <a href="/pages/tnc.php" target="_blank">Terms & Privacy Policy</a></p>
+                    <p style="text-align:center;">By booking a consultation, you accept our <a href="/pages/tnc.php" target="_blank">Terms & Privacy Policy</a></p>
                 </div>
             
             </div>
