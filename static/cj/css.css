@@ -5,7 +5,7 @@ img{width:100%;vertical-align:middle} form{width:100%;height:100%} a{text-decora
 /* Define*/
 :root {
   --bg-color: #ff3939;  
-  --info-error: #dd1d1d;
+  --info-error: #f96e6e;
   --info-success: #38f227;
   --info-warning: #ebe644;
   --info-info: #ededed;
@@ -45,7 +45,7 @@ z-index: 0;}
   bottom:-1px;left:0;}
 .bragsheet1{padding:30px 20px;}
 .bragsheet1 ul{display:flex;}
-.bragsheet1 ul>li{ max-width: 20%;flex: 0 0 20%;text-align:center;}
+.bragsheet1 ul>li{ max-width: 25%;flex: 0 0 25%;text-align:center;}
 
 .v-main-tabpad{display:flex; max-width: 1140px !important;}
 .v-main-tabpad>.v-main-tabpad-1{flex: 0 0 33.333333%;-ms-flex-wrap: wrap;flex-wrap: wrap;
@@ -91,6 +91,66 @@ z-index: 0;}
 #bo1x{left:0;bottom:-0.6em;width:1em;height:1em;border:.25em solid #000;border-radius:15%;transform:translate(0,-1em) rotate(-45deg);
     animation:2.5s cubic-bezier(.79,0,.47,.97) infinite push}
 @keyframes push{0%{transform:translate(0,-1em) rotate(-45deg)}5%{transform:translate(0,-1em) rotate(-50deg)}20%{transform:translate(1em,-2em) rotate(47deg)}25%{transform:translate(1em,-2em) rotate(45deg)}30%{transform:translate(1em,-2em) rotate(40deg)}45%{transform:translate(2em,-3em) rotate(137deg)}50%{transform:translate(2em,-3em) rotate(135deg)}55%{transform:translate(2em,-3em) rotate(130deg)}70%{transform:translate(3em,-4em) rotate(217deg)}75%{transform:translate(3em,-4em) rotate(220deg)}100%{transform:translate(0,-1em) rotate(-225deg)}}
+
+
+
+
+.hgr5 {
+  position: relative;
+  background: linear-gradient(to bottom, #ff2424, #fff);
+  margin-bottom: 12px;
+}
+
+.hgr5-oo {
+  position: absolute;
+  top: -1px;
+  left: 0;
+  width: 100%;
+  height: 9rem;
+  z-index: 2;
+  transform: rotate(180deg);
+  padding-top: 3rem;
+}
+
+.hgr5-oo-svg {
+  height: 100%;
+  width: 100%;
+}
+
+.hgr5-ia {
+  margin-top: 1rem;
+  display: flex;
+  padding: 8rem 12px 35px 0;
+}
+
+.hgr5-ia-l {
+  max-width: 55%;
+  flex: 55%;
+  padding: .8rem 1rem;
+  color: #623636
+}
+
+.hgr5-ia-ll {
+  max-width: 45%;
+  flex: 45%;
+  padding: 1rem 1rem;
+}
+
+@media screen and (max-width:900px) {
+  .hgr5-ia {
+      display: block
+  }
+
+  .hgr5-ia-l,
+  .hgr5-ia-ll {
+      max-width: 100%;
+      width: 100%;
+      padding: 1rem 1rem;
+  }
+}
+
+
+
 
 /*index 0*/
 

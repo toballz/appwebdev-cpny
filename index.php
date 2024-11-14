@@ -9,21 +9,109 @@
         $headKeywords = "";
         include(site::head);?>
     <style type="text/css">
-        @-webkit-keyframes bounceHero { 0% { top: 0px; } 50% { top: 25px; } 100% { top: 0px; } }
-        @keyframes bounceHero { 0% { top: 0px; } 50% { top: 25px; } 100% { top: 0px; } }
+    @-webkit-keyframes bounceHero {
+        0% {
+            top: 0px;
+        }
 
-        .avrey-a{font-weight:600;overflow:hidden;position:relative;border: 2px solid #0167da;color: #0167da; box-shadow: 0 0 1px rgba(0, 0, 0, 0); padding: 16px 25px;width:13rem;border-radius:15px;}
-        .avrey-a::before {z-index: -1; content: " "; display: block; position: absolute; top: 0; right: 0; bottom: 0; left: 0;inset: 0 0 0 0; background:  #0167da;
-            transition: transform .5s ease;transition-timing-function:cubic-bezier(0.52, 1.64, 0.37, 0.66); transform: scaleX(0); transform-origin: bottom right;}
-        .avrey-a:hover::before { transform: scaleX(1); transform-origin: bottom left;}
-        .avrey-a:hover { color:#ffff !important}
+        50% {
+            top: 25px;
+        }
 
-        .formschedule{position: relative;padding:3rem;background:#fff;border-radius:15px; box-shadow: 0 1rem 3rem rgba(0,0,0,.175)!important;}
-        .formschedule .whatapp-c, .formschedule input,.formschedule textarea{width: 100%; padding: 12px;margin-bottom:24px; box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);border:0; outline: none;}
-        .formschedule textarea{height:9rem;}
-        .formschedule-submit{transition:.3s all linear;cursor:pointer;background: #ff2424;border-radius:15px;color:#fff;margin-top:15px;padding:.9rem 0 !important;}
-        .formschedule-submit:hover{ transform: scale(1.05);}
-</style>
+        100% {
+            top: 0px;
+        }
+    }
+
+    @keyframes bounceHero {
+        0% {
+            top: 0px;
+        }
+
+        50% {
+            top: 25px;
+        }
+
+        100% {
+            top: 0px;
+        }
+    }
+
+    .avrey-a {
+        font-weight: 600;
+        overflow: hidden;
+        position: relative;
+        border: 2px solid #0167da;
+        color: #0167da;
+        box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+        padding: 16px 25px;
+        width: 13rem;
+        border-radius: 15px;
+    }
+
+    .avrey-a::before {
+        z-index: -1;
+        content: " ";
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        inset: 0 0 0 0;
+        background: #0167da;
+        transition: transform .5s ease;
+        transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+        transform: scaleX(0);
+        transform-origin: bottom right;
+    }
+
+    .avrey-a:hover::before {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+    }
+
+    .avrey-a:hover {
+        color: #ffff !important
+    }
+
+    .formschedule {
+        position: relative;
+        padding: 3rem;
+        background: #fff;
+        border-radius: 15px;
+        box-shadow: 0 1rem 3rem rgba(0, 0, 0, .175) !important;
+    }
+
+    .formschedule .whatapp-c,
+    .formschedule input,
+    .formschedule textarea {
+        width: 100%;
+        padding:15px 12px;
+        margin-bottom: 24px;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        border: 0;
+        outline: none;border-radius: 6px;
+    }
+
+    .formschedule textarea {
+        height: 9rem;
+    }
+
+    .formschedule-submit {
+        transition: .3s all linear;
+        cursor: pointer;
+        background: #ff2424;
+        border-radius: 15px;
+        color: #fff;
+        margin-top: 15px;
+        padding: .9rem 0 !important;
+    }
+
+    .formschedule-submit:hover {
+        transform: scale(1.05);
+    }
+    </style>
 </head>
 
 
@@ -36,18 +124,28 @@
 
             <div style="position:absolute;top:0;left:0;z-index: 111;width: 100%;height: 100%;">
                 <div class="main_container" style="display:flex;height: 100%;">
-                    <div style="flex:60%;max-width:60%;height: 100%;padding:24px;display:flex;justify-content:center;align-items:center;">
+                    <div
+                        style="flex:60%;max-width:60%;height: 100%;padding:24px;display:flex;justify-content:center;align-items:center;">
                         <div style="">
-                            <h1 style="margin:.9rem 0;font-size:2rem;"><p style="margin:0;">Web & App</p>Development Solutions: </h1>
-                            <p style="margin:.9rem 0;">Empower Your Digital Presence with <b><?php echo site::name;?></b> Managing Every Detail.</p>
-                            <p style="margin-bottom:1.3rem;">Cutting-Edge Solutions for Next-Gen Web & App Development: Elevating Your Online Impact</p>
+                            <h1 style="margin:.9rem 0;font-size:2rem;">
+                                <p style="margin:0;">Website & Mobile App</p>Development Solutions:
+                            </h1>
+                            <p style="margin:.9rem 0;">Empower Your Digital Presence with
+                                <b><?php echo site::name;?></b> Managing Every Detail.
+                            </p>
+                            <p style="margin-bottom:1.3rem;">Cutting-Edge Solutions for Next-Gen Web & App Development:
+                                Elevating Your Online Impact</p>
                             <div>
                                 <a href="#contactus" class="avrey-a">Let's Talk about your project</a>
                             </div>
                         </div>
                     </div>
-                    <div style="flex:40%;max-width:40%;height: 100%;display:flex;align-items:center;justify-content:center;">
-                        <div style="width:710px;position: relative;=transform: rotate(316deg);-webkit-animation: bounceHero 3s infinite; animation: bounceHero 3s infinite;"><img alt="phone image" data-imgsrc="<?php echo site::staticimg.'/phone1r.png?'.$rs;?>"/></div>
+                    <div
+                        style="flex:40%;max-width:40%;height: 100%;display:flex;align-items:center;justify-content:center;">
+                        <div
+                            style="width:710px;position: relative;=transform: rotate(316deg);-webkit-animation: bounceHero 3s infinite; animation: bounceHero 3s infinite;">
+                            <img alt="phone image" data-imgsrc="<?php echo site::staticimg.'/phone1r.png?'.$rs;?>" />
+                        </div>
                     </div>
                 </div>
             </div>
@@ -56,15 +154,16 @@
             <?php include(site::header);?>
         </div>
 
-    </header> 
- 
+    </header>
 
-    <section class="  ">
-        <div class="main_container v-main-tabpad">
+
+    <section class="main_container">
+        <div class=" v-main-tabpad">
             <div class="v-main-tabpad-1">
                 <div class="v-main-tabpad-2">
                     <div style="display:flex;">
-                        <div class="v-main-tabpad-2-img"><img alt="website globe image" data-imgsrc="<?php echo site::staticimg;?>/web.svg?<?php echo $rs;?>"/></div>
+                        <div class="v-main-tabpad-2-img"><img alt="website globe image"
+                                data-imgsrc="<?php echo site::staticimg;?>/web.svg?<?php echo $rs;?>" /></div>
                     </div>
                     <div>
                         <h2>Website</h2>
@@ -76,120 +175,171 @@
                             <li>Security Features</li>
                             <li>Advertising Campaign</li>
                             <li>Website Maintenance and Support</li>
+                            <li>Digital Marketing</li>
                             <li>And More</li>
                         </ul>
-                        <div class="more-o"><a href="#contactus" onclick="$('.whatapp-c').val('app-website');">Talk to Us</a></div>
+                        <div class="more-o"><a href="#contactus" onclick="$('.whatapp-c').val('app-website');">Talk to
+                                Us</a></div>
                     </div>
                 </div>
             </div>
             <div class="v-main-tabpad-1">
                 <div class="v-main-tabpad-2">
                     <div style="display:flex;">
-                        <div class="v-main-tabpad-2-img"><img alt="android image" data-imgsrc="<?php echo site::staticimg;?>/android.svg?<?php echo $rs;?>"/></div>
-                        <div class="v-main-tabpad-2-img"><img alt="apple image" data-imgsrc="<?php echo site::staticimg;?>/apple.svg?<?php echo $rs;?>"/></div>
+                        <div class="v-main-tabpad-2-img"><img alt="android image"
+                                data-imgsrc="<?php echo site::staticimg;?>/android.svg?<?php echo $rs;?>" /></div>
+                        <div class="v-main-tabpad-2-img"><img alt="apple image"
+                                data-imgsrc="<?php echo site::staticimg;?>/apple.svg?<?php echo $rs;?>" /></div>
                     </div>
                     <div>
                         <h2>Android/IOS</h2>
                         <ul>
+                            <li>App store/Google play Optimization</li>
                             <li>Cross-Platform Compatibility</li>
+                            <li>Responsive User Interface</li>
                             <li>Data Encryption and Security</li>
                             <li>Custom App Development</li>
-                            <li>Calendar and Events</li>
                             <li>In-App Purchases</li>
                             <li>Push Notifications</li>
                             <li>Offline Capabilities</li>
-                            <li>And More</li> 
-                        </ul>
-                        <div class="more-o"><a href="#contactus" onclick="$('.whatapp-c').val('app-mobile');">Talk to Us</a></div>
-                    </div>
-                </div>
-            </div>
-            <div class="v-main-tabpad-1">
-                <div class="v-main-tabpad-2">
-                    <div style="display:flex;">
-                        <div class="v-main-tabpad-2-img"><img alt="windows image" data-imgsrc="<?php echo site::staticimg;?>/windows.svg?<?php echo $rs;?>"/></div>
-                    </div>
-                    <div>
-                        <h2>Desktop Apps</h2>
-                        <ul>
-                            <li>Cross-Platform Compatibility</li>
-                            <li>Responsive User Interface</li>
-                            <li>System Services</li>
-                            <li>API Calls</li>
-                            <li>Security Features</li>
-                            <li>Security Features</li>
                             <li>And More</li>
                         </ul>
-                        <div class="more-o"><a href="#contactus" onclick="$('.whatapp-c').val('app-desktop');">Talk to Us</a></div>
+                        <div class="more-o"><a href="#contactus" onclick="$('.whatapp-c').val('app-mobile');">Talk to
+                                Us</a></div>
                     </div>
                 </div>
             </div>
         </div>
-        
-        <div class="bragsheet">
-            <div class="main_container bragsheet1">
-                <ul>
-                    <li><p class="a-o1">300</p><p>Websites</p></li>
-                    <li><p class="a-o1">50</p><p>Android Apps</p></li>
-                    <li><p class="a-o1">50</p><p>IOS Apps</p></li>
-                    <li><p class="a-o1">100</p><p>Windows Apps</p></li>
-                    <li><p class="a-o1">50</p><p>Mac Apps</p></li>
-                </ul>
-            </div>
+
+    </section>
+
+
+    <section class="bragsheet">
+        <div class="main_container bragsheet1">
+            <ul>
+                <li>
+                    <p class="a-o1">300</p>
+                    <p>Websites</p>
+                </li>
+                <li>
+                    <p class="a-o1">50</p>
+                    <p>Android Apps</p>
+                </li>
+                <li>
+                    <p class="a-o1">50</p>
+                    <p>IOS Apps</p>
+                </li> 
+                <li>
+                    <p class="a-o1">50</p>
+                    <p>Mac Apps</p>
+                </li>
+            </ul>
         </div>
     </section>
 
-<style>
-.hgr5{position:relative;background: linear-gradient(to bottom, #ff2424, #fff);margin-bottom:12px;}
-.hgr5-oo{position:absolute;top:-1px;left:0;width:100%;height:9rem;z-index:2; transform: rotate(180deg);padding-top: 3rem;}
-.hgr5-oo-svg{height: 100%;width: 100%;}
+    <section class="main_container">
+        <h3>Let's Grow Your Brand.</h3>
+        <div>We have a team of experts working together to fufil you project needs.</div>
+        
+    </section>
 
-.hgr5-ia{margin-top:1rem;display:flex; padding: 8rem 12px 35px 0;}
-.hgr5-ia-l{ max-width: 55%;flex: 55%;padding:.8rem 1rem;color:#fff}
-.hgr5-ia-ll{max-width: 45%;flex: 45%; padding:1rem 1rem;}
-@media screen and (max-width:900px){
-    .hgr5-ia{display:block}
-    .hgr5-ia-l, .hgr5-ia-ll{max-width: 100%;width:100%; padding:1rem 1rem;}
-}
-</style>
+
+
+    <section class="main_container">
+        <h3>Have an idea.</h3>
+    </section>
+
+
+
+
+
+
+
+
+
+ 
 
 
     <div class="hgr5">
         <div class="hgr5-oo">
-            <svg class="hgr5-oo-svg" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" viewBox="0 0 1920 170"><defs><linearGradient x1="49.253%" y1="85.804%" x2="49.253%" y2="43.074%" id="a"><stop stop-color="#FFF" offset="0%"></stop><stop stop-color="#FFF" offset="100%"></stop></linearGradient></defs><g fill="none"><path d="M1920 4.719v69.5c-362.63 60.036-692.797 55.536-990.5-13.5C565.833-23.615 256 12.813 0 170L1 4.719h1919z" fill="url(#a)" transform="rotate(180 960.5 87.36)"></path><path d="M1 170V99c269.033-70.44 603.533-66.44 1003.5 12C1494 207 1921 4.719 1921 4.719L1920 170H1z" fill-opacity=".3" fill="#FFF"></path><path d="M1 170.75V99C373.115 4.216 705.281-4.951 997.5 71.5c365.667 95.667 673.5 73.406 923.5-66.781l-1 166.031H1z" fill-opacity=".3" fill="#FFF"></path><path d="M1 170v-67C400.333-1.333 744.167-19 1032.5 50c432.5 103.5 754 19.219 888.5-45.281l-1 166.031L1 170z" fill-opacity=".35" fill="#FFF"></path></g></svg>
+            <svg class="hgr5-oo-svg" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
+                viewBox="0 0 1920 170">
+                <defs>
+                    <linearGradient x1="49.253%" y1="85.804%" x2="49.253%" y2="43.074%" id="a">
+                        <stop stop-color="#FFF" offset="0%"></stop>
+                        <stop stop-color="#FFF" offset="100%"></stop>
+                    </linearGradient>
+                </defs>
+                <g fill="none">
+                    <path
+                        d="M1920 4.719v69.5c-362.63 60.036-692.797 55.536-990.5-13.5C565.833-23.615 256 12.813 0 170L1 4.719h1919z"
+                        fill="url(#a)" transform="rotate(180 960.5 87.36)"></path>
+                    <path d="M1 170V99c269.033-70.44 603.533-66.44 1003.5 12C1494 207 1921 4.719 1921 4.719L1920 170H1z"
+                        fill-opacity=".3" fill="#FFF"></path>
+                    <path
+                        d="M1 170.75V99C373.115 4.216 705.281-4.951 997.5 71.5c365.667 95.667 673.5 73.406 923.5-66.781l-1 166.031H1z"
+                        fill-opacity=".3" fill="#FFF"></path>
+                    <path
+                        d="M1 170v-67C400.333-1.333 744.167-19 1032.5 50c432.5 103.5 754 19.219 888.5-45.281l-1 166.031L1 170z"
+                        fill-opacity=".35" fill="#FFF"></path>
+                </g>
+            </svg>
         </div>
         <div id="contactus" class="main_container hgr5-ia">
 
-            <div class="hgr5-ia-l"> 
-                <h1>What we offer</h1>
-                <ul>
-                    <li>Custom Website Development</li> 
-                </ul>
+            <div class="hgr5-ia-l">  
+                <h2 style="color:#fff">Grow Your Business with Our Custom Website Development Solutions</h2>
+                <p style="color:#e9e9e9">We specialize in creating high-performing websites/mobile-apps tailored to meet your
+                    unique business goals. Our custom development solutions are designed not just to look good, but to
+                    drive sales and engage customers effectively. Here’s how our advanced features deliver results:</p>
+                <h3 style="color:#e9e9e9">E-commerce Functionality</h3>
+                <p style="color:#e9e9e9">We build secure, user-friendly online stores with a smooth shopping experience, from adding items to
+                    checkout, and flexible payment options which customers and easily use.</p>
+
+                <h3 style="color:#7d7d7d">Live Chat Support & Chatbots</h3>
+                <p style="color:#7d7d7d">Give your customers the answers they need, instantly. Our 24/7 chat and chatbot options enhance
+                    customer satisfaction and reduce bounce rates, creating a seamless shopping experience that
+                    converts.</p>
+
+                <h3 style="color:#896b6b">Email and SMS Marketing Integration</h3>
+                <p style="color:#896b6b">Drive more traffic to your site and keep your customers coming back with personalized marketing. We
+                    integrate targeted email and SMS campaigns that deliver timely promotions, reminders, and updates,
+                    helping you connect with your audience on a personal level.</p>
+  
+                <h3 style="color:#896b6b">Social Media Integration</h3>
+                <p style="color:#7d7d7d">Connect your business with the world! With built-in social media integration, customers can easily
+                    share products, engage with your brand, and spread the word, bringing you more traffic and
+                    visibility.</p>
+
+                <p style="color:#000">Partner with us to launch a app that not only showcases your brand but actively drives sales.
+                    Let’s transform your business into an online powerhouse!</p>
+ 
             </div>
 
             <div class="hgr5-ia-ll">
                 <div class="formschedule">
                     <h2 style="margin-bottom:24px;text-align:center;font-size:24px;"> Tell us about your business.</h2>
-                    
+
                     <div id="loade1r">
                         <div id="bo1x"></div>
                         <div id="hil1l"></div>
                     </div>
 
-                    <input type="text" placeholder="First & Last Name *" name="flname"/>
-                    <input type="email" placeholder="Email: mail@example.com **" name="emname"/>
-                    <input type="text" placeholder="Phone number **" name="pnumb"/>
+                    <input type="text" placeholder="First & Last Name *" name="flname" />
+                    <input type="email" placeholder="Email: mail@example.com **" name="emname" />
+                    <input type="text" placeholder="Phone number **" name="pnumb" />
                     <select name="whatapp" class="whatapp-c">
                         <option value="o--o">What app do you want?</option>
                         <option value="app-mobile">Creating Mobile App</option>
                         <option value="app-website">Creating a Website</option>
                         <option value="app-desktop">Creating Desktop App</option>
                     </select>
-                    <textarea placeholder="Explain your app idea. *" name="descr"></textarea>
-                    <input type="button" value="Book Consultation" class="formschedule-submit"/>
-                    <p style="text-align:center;">By booking a consultation, you accept our <a href="/pages/tnc.php" target="_blank">Terms & Privacy Policy</a></p>
+                    <textarea placeholder="Tell us about your website/mobile app idea. *" name="descr"></textarea>
+                    <input type="button" value="Book Consultation" class="formschedule-submit" />
+                    <p style="text-align:center;">By booking a consultation, you accept our <a style="color:blue;" href="/pages/tnc.php?t=c"
+                            target="blank">Terms & Privacy Policy</a></p>
                 </div>
-            
+
             </div>
         </div>
     </div>

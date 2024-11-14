@@ -18,4 +18,3 @@ class db{
 const __dir=__dir__;
 //donot delete edit as needed
 include 'aapp/e39e22bb8b4e0f238180959c70eaf4c7.php';
-?>

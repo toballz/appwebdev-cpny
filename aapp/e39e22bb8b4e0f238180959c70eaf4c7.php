@@ -1,5 +1,5 @@
 <?php
-$rs="0x14";//change to reload css,js,src
+$rs="0x14z";//change to reload css,js,src
 class site{
     const name="example name, LLC";
     //
