@@ -62,7 +62,7 @@ loader={
         ar(function(){
             ts.attr("src",ts.attr("data-imgsrc"));
             ts.attr("data-imgsrc","");
-        },600);
+        },500);
     });
 
  // END definer ************************************************** */

@@ -8,110 +8,7 @@
         $headDescription = "asd";
         $headKeywords = "";
         include(site::head);?>
-    <style type="text/css">
-    @-webkit-keyframes bounceHero {
-        0% {
-            top: 0px;
-        }
-
-        50% {
-            top: 25px;
-        }
-
-        100% {
-            top: 0px;
-        }
-    }
-
-    @keyframes bounceHero {
-        0% {
-            top: 0px;
-        }
-
-        50% {
-            top: 25px;
-        }
-
-        100% {
-            top: 0px;
-        }
-    }
-
-    .avrey-a {
-        font-weight: 600;
-        overflow: hidden;
-        position: relative;
-        border: 2px solid #0167da;
-        color: #0167da;
-        box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-        padding: 16px 25px;
-        width: 13rem;
-        border-radius: 15px;
-    }
-
-    .avrey-a::before {
-        z-index: -1;
-        content: " ";
-        display: block;
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        inset: 0 0 0 0;
-        background: #0167da;
-        transition: transform .5s ease;
-        transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
-        transform: scaleX(0);
-        transform-origin: bottom right;
-    }
-
-    .avrey-a:hover::before {
-        transform: scaleX(1);
-        transform-origin: bottom left;
-    }
-
-    .avrey-a:hover {
-        color: #ffff !important
-    }
-
-    .formschedule {
-        position: relative;
-        padding: 3rem;
-        background: #fff;
-        border-radius: 15px;
-        box-shadow: 0 1rem 3rem rgba(0, 0, 0, .175) !important;
-    }
-
-    .formschedule .whatapp-c,
-    .formschedule input,
-    .formschedule textarea {
-        width: 100%;
-        padding:15px 12px;
-        margin-bottom: 24px;
-        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-        border: 0;
-        outline: none;border-radius: 6px;
-    }
-
-    .formschedule textarea {
-        height: 9rem;
-    }
-
-    .formschedule-submit {
-        transition: .3s all linear;
-        cursor: pointer;
-        background: #ff2424;
-        border-radius: 15px;
-        color: #fff;
-        margin-top: 15px;
-        padding: .9rem 0 !important;
-    }
-
-    .formschedule-submit:hover {
-        transform: scale(1.05);
-    }
-    </style>
+ 
 </head>
 
 
@@ -253,10 +150,7 @@
 
 
 
-
-
-
-
+ 
  
 
 
@@ -319,12 +213,7 @@
             <div class="hgr5-ia-ll">
                 <div class="formschedule">
                     <h2 style="margin-bottom:24px;text-align:center;font-size:24px;"> Tell us about your business.</h2>
-
-                    <div id="loade1r">
-                        <div id="bo1x"></div>
-                        <div id="hil1l"></div>
-                    </div>
-
+ 
                     <input type="text" placeholder="First & Last Name *" name="flname" />
                     <input type="email" placeholder="Email: mail@example.com **" name="emname" />
                     <input type="text" placeholder="Phone number **" name="pnumb" />
